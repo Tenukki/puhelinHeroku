@@ -3,10 +3,9 @@ const app = express()
 const bodyParser = require('body-parser')
 var morgan = require('morgan')
 const cors = require('cors')
-app.use(express.static('build'))
 app.use(cors())
 app.use(bodyParser.json())
-
+app.use(express.static('build'))
 
 let persons =  [
     {
